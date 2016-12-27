@@ -65,6 +65,7 @@ class Chef
       attr_accessor :managing_symlink
 
       def initialize(new_resource, run_context)
+        puts "FILE RESOURCE YO"
         @content_class ||= Chef::Provider::File::Content
         if new_resource.respond_to?(:atomic_update)
           @deployment_strategy = Chef::FileContentManagement::Deploy.strategy(new_resource.atomic_update)

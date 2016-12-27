@@ -23,4 +23,6 @@ $:.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 require "chef"
 require "chef/application/client"
 
+puts "hello-there"
+
 Chef::Application::Client.new.run
